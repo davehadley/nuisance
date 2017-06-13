@@ -54,9 +54,9 @@ GENIEWeightEngine::GENIEWeightEngine(std::string name) {
 	if (xsec_qevec)
 		fGenieRW->AdoptWghtCalc("xsec_ccqe_vec",
 		                        new genie::rew::GReWeightNuXSecCCQEvec);
-	if (xsec_qeaxial)
-	  fGenieRW->AdoptWghtCalc("xsec_ccqe_axial",
-				  new genie::rew::GReWeightNuXSecCCQEaxial);
+	//if (xsec_qeaxial)
+	//  fGenieRW->AdoptWghtCalc("xsec_ccqe_axial",
+	//			  new genie::rew::GReWeightNuXSecCCQEaxial);
 	if (xsec_dis)
 		fGenieRW->AdoptWghtCalc("xsec_dis", new genie::rew::GReWeightNuXSecDIS);
 	if (xsec_nc)

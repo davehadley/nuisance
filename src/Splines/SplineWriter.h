@@ -4,7 +4,7 @@
 #include "Spline.h"
 #include "FitParameters.h"
 #include "SplineUtils.h"
-#include "TFitterMinuit.h"
+//#include "TFitterMinuit.h"
 
 class SplineFCN {
 public:
