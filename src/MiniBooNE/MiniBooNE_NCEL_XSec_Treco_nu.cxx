@@ -51,6 +51,7 @@ MiniBooNE_NCEL_XSec_Treco_nu::MiniBooNE_NCEL_XSec_Treco_nu(nuiskey samplekey) {
   SetFluxHistogram(FitPar::GetDataBase()+"/MiniBooNE/ncqe/flux.txt");
 
   FinaliseSampleSettings();
+  this->SetupDefaultHist(); 
 
   // Scaling Setup ---------------------------------------------------
   // The scale factor is quite complicated because MB didn't divide by number of targets.
