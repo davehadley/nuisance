@@ -179,6 +179,8 @@ void MiniBooNE_NCEL_XSec_Treco_nu::SetCovarMatrix(std::string covarFile, int dim
     row++;
   }
 
+  this->fFullCovar = dynamic_cast<TMatrixDSym*>(this->covar->Clone());
+
   // // Robust matrix inversion method
   TDecompSVD LU = TDecompSVD(*this->covar);
   this->covar = new TMatrixDSym(dim, LU .Invert().GetMatrixArray(), "");
