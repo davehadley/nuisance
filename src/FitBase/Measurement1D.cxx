@@ -1184,6 +1184,11 @@ void Measurement1D::Write(std::string drawOpt) {
   AutoWriteExtraTH1();
   WriteExtraHistograms();
 
+  bool drawCov = (drawOpt.find("COV") != std::string::npos);
+  if (drawCov) {
+    TH2D(*fFullCovar).Write((fName + "_COV").c_str());
+  }
+ 
   // Returning
   LOG(SAM) << "Written Histograms: " << fName << std::endl;
   return;
